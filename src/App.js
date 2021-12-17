@@ -1,19 +1,24 @@
+import { useState } from "react";
+import Header from "./components/Header";
+import FeedbackItem from "./components/FeedbackItem";
+import FeedbackData from "./components/data/FeedbackData";
+import FeedbackList from "./components/FeedbackList";
 function App() {
-  const title = 'Blog Post'
-  const body = 'This is my blog'
-  const comment = [
-    {id : 1, text: 'comment 1'},
-    {id : 2, text: 'comment 2'},
-    {id : 3, text: 'comment 3'}
-  ]
+  const [feedback, setFeedback] = useState(FeedbackData)
+
   return (
     <>
-      <h1>{title.toUpperCase()}</h1>
-      <p>{body}</p>
-      {comment.map(item => <li key={item.id}>{item.text}</li>)}
+
+      <div>
+        <h1>My App</h1>
+        <Header text = 'Feeback UI' bgColor = 'blue' color = 'red'/>
+        <div className='container'>
+          <FeedbackList feedback={feedback}/>
+        </div>
+      </div>
+
     </>
   )
 }
-
 
 export default App;

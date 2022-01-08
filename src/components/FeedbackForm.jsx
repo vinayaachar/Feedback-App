@@ -57,6 +57,7 @@ function FeedbackForm() {
   }
   const feedbackRating = (r) => {
     setRating(r)
+    console.log(review)
   }
 
   return (

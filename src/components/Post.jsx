@@ -18,8 +18,8 @@ function Post() {
   const params = useParams()
   return (
     <div>
-      Post ID: {params.id}
-      <button onClick={onClick}>Click</button>
+      <p>Post ID: {params.id}</p>
+      <p><button onClick={onClick}>Back to Home</button></p>
     </div>
   )
 }
